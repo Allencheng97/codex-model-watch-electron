@@ -2,6 +2,8 @@
 
 [中文](README.md) | **English**
 
+A fully local dashboard for Codex: model usage, 5h/7d quota windows, capacity rejections — plus an active probe that catches silent model swaps (you asked for A, the server served B). Pure Python stdlib, 100% local.
+
 A fully local, zero-dependency tool that monitors your Codex **model usage, rate-limit windows, capacity rejections**, and **actively probes for silent model swaps** — you asked for model A, the server actually served model B.
 
 ![Dashboard](screenshots/panel-overview.png)
