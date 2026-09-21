@@ -188,7 +188,7 @@ def scan_sessions(conn, codex_home, max_age_days):
             st = os.stat(fp)
         except OSError:
             continue
-        row = conn.execute("SELECT offset, mtime, size FROM files WHERE path=?", (fp,)).fetchone()
+        row = conn.execute("SELECT offset, mtime, size, lines FROM files WHERE path=?", (fp,)).fetchone()
         # 续读策略：文件被截断/重写则从头解析，否则从上次 offset 续读新增部分
         start, resume, unchanged = 0, False, False
         if row:
