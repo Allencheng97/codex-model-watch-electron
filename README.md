@@ -1,5 +1,11 @@
 # codex-model-watch
 
+> 基于 [ysh1112/codex-model-watch](https://github.com/ysh1112/codex-model-watch) 制作。感谢原作者 ysh1112 提供本地 Codex 使用监控、额度统计和模型探针的基础实现。
+
+上游项目：<https://github.com/ysh1112/codex-model-watch>  
+原作者：[@ysh1112](https://github.com/ysh1112)  
+许可证：MIT（保留原项目 License 和来源说明）
+
 本地监控 Codex 的模型使用、5h/7d 额度水位与容量拒单，并用探针即时验证「请求 A 却被悄悄换成 B」的模型偷换。纯 Python 标准库，数据不出本机。
 
 **中文** | [English](README.en.md)
@@ -92,6 +98,21 @@ python codex_model_watch.py --demo
 | `--demo` | 内置演示数据，不读取真实日志 |
 | `--scan-only` | 只扫描解析并打印模型分布摘要，不启动网页 |
 | `--no-open` | 不自动打开浏览器 |
+
+### macOS 菜单栏 App
+
+安装 Electron 依赖后可直接启动菜单栏版本：
+
+```bash
+npm install
+npm start
+```
+
+启动后应用常驻 macOS 状态栏，点击图标显示监控小面板；右键图标可在浏览器打开或退出。构建可分发包：
+
+```bash
+npm run dist
+```
 
 数据库存在 `~/.codex-model-watch/state.db`（SQLite），重复启动是增量解析，不会重复计数。
 

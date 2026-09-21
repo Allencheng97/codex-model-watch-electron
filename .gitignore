@@ -1,8 +1,2 @@
-__pycache__/
-*.pyc
-.DS_Store
-data/
-*.db
-*.db-journal
-screenshots/.thumbs/
-docs/social-card.html
+node_modules/
+dist/
