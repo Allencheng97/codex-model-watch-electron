@@ -6,6 +6,14 @@
 原作者：[@ysh1112](https://github.com/ysh1112)  
 许可证：MIT（保留原项目 License 和来源说明）
 
+## macOS DMG 应用
+
+本项目提供可直接安装的 macOS Apple Silicon（ARM64）DMG 应用：
+
+[下载最新 DMG](https://github.com/Allencheng97/codex-model-watch-electron/releases/latest)
+
+安装后，应用会显示在 Dock，并在 macOS 状态栏提供监控图标。首次打开未签名应用时，请右键点击应用并选择“打开”。
+
 本地监控 Codex 的模型使用、5h/7d 额度水位与容量拒单，并用探针即时验证「请求 A 却被悄悄换成 B」的模型偷换。纯 Python 标准库，数据不出本机。
 
 **中文** | [English](README.en.md)
